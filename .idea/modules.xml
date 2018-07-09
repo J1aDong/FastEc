@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/FastEc.iml" filepath="$PROJECT_DIR$/FastEc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/example/example.iml" filepath="$PROJECT_DIR$/example/example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ly-annotations/ly-annotations.iml" filepath="$PROJECT_DIR$/ly-annotations/ly-annotations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ly-compiler/ly-compiler.iml" filepath="$PROJECT_DIR$/ly-compiler/ly-compiler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ly-core/ly-core.iml" filepath="$PROJECT_DIR$/ly-core/ly-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ly-ec/ly-ec.iml" filepath="$PROJECT_DIR$/ly-ec/ly-ec.iml" />
+    </modules>
+  </component>
+</project>
