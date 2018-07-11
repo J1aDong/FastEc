@@ -16,7 +16,7 @@ public final class Ly {
         return Configrator.getInstance().getLyConfigs();
     }
 
-    public static Context getApplication() {
+    public static Context getApplicationContext() {
         return (Context) getConfiguration().get(ConfigType.APPLICATION_CONTEXT.name());
     }
 }

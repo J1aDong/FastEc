@@ -7,6 +7,7 @@ import com.mj.ly_core.net.callback.IFailure;
 import com.mj.ly_core.net.callback.IRequest;
 import com.mj.ly_core.net.callback.ISuccess;
 import com.mj.ly_core.net.callback.RequestCallbacks;
+import com.mj.ly_core.net.download.DownloadHandler;
 import com.mj.ly_core.ui.LoaderStyle;
 import com.mj.ly_core.ui.LyLoader;
 
@@ -26,6 +27,9 @@ public class RestClient {
     private static final WeakHashMap<String, Object> PARAMS = RestCreator.getParams();
 
     private final IRequest REQUSET;
+    private final String DOWNLOAD_DIR;
+    private final String EXTENSION;
+    private final String NAME;
     private final ISuccess SUCCESS;
     private final IFailure FAILURE;
     private final IError ERROR;
@@ -37,6 +41,9 @@ public class RestClient {
     public RestClient(String url,
                       Map<String, Object> params,
                       IRequest request,
+                      String downloadDir,
+                      String extension,
+                      String name,
                       ISuccess success,
                       IFailure failure,
                       IError error,
@@ -47,6 +54,9 @@ public class RestClient {
         this.URL = url;
         PARAMS.putAll(params);
         this.REQUSET = request;
+        this.DOWNLOAD_DIR = downloadDir;
+        this.EXTENSION = extension;
+        this.NAME = name;
         this.SUCCESS = success;
         this.FAILURE = failure;
         this.ERROR = error;
@@ -142,5 +152,9 @@ public class RestClient {
 
     public final void delete() {
         request(HttpMethod.DELETE);
+    }
+
+    public final void download(){
+        new DownloadHandler(URL,REQUSET,DOWNLOAD_DIR,EXTENSION,NAME,SUCCESS,FAILURE,ERROR).handleDownload();
     }
 }
